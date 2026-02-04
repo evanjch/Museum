@@ -6,7 +6,7 @@ body {
 
 header {
     background-color: #211714;
-    color: brown;
+    color: #e5aa70;
     padding: 20px;
     text-align: center;
 }
@@ -33,5 +33,47 @@ nav button {
 footer {
     background-color: #ddd;
     text-align: center;
-    padding: 15px;
+    padding: 5px;
+}
+
+.staff-profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.staff-profile.reverse {
+    flex-direction: row-reverse;
+}
+
+.staff-profile img {
+    width: 550px;
+    height: auto;
+    border-radius: 6px;
+}
+
+.staff-text {
+    max-width: 600px;
+}
+
+.staff-text h2 {
+    color: #87ceeb;
+}
+
+.staff-text p {
+    color: #ffff;
+}
+
+.columns div {
+    line-height: 1.6;
+}
+
+.columns h2 {
+    margin-bottom: 12px;
+}
+
+.columns p {
+    margin-top: 0;
+    margin-bottom: 16px;
 }
