@@ -77,3 +77,51 @@ footer {
     margin-top: 0;
     margin-bottom: 16px;
 }
+
+.collection-section {
+    padding: 30px;
+}
+
+.collection-item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.collection-item img {
+    width: 400px;
+    height: auto;
+    border-radius: 6px;
+}
+
+.collection-text {
+    max-width: 700px;
+}
+
+.collection-text h2 {
+    color: #211714;
+    margin-bottom: 10px;
+}
+
+.collection-text p {
+    margin: 6px 0;
+    color: #000000;
+}
+
+.collection-section h1 {
+    color: #87ceeb;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#anthropology h1 {
+    color: #ffa07a;
+}
+
+.collection-text ul {
+    margin: 6px 0 12px 20px;
+    color: #000000;
+}

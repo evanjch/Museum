@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Evan Chekal">
     <meta name="robots" content="noindex, nofollow">
     <link rel="stylesheet" href="../css/style.css">
     <title>Collections</title>
@@ -15,20 +16,279 @@
             <button onclick="location.href='../index.html'">Home</button>
             <button onclick="location.href='staff.html'">Staff</button>
             <button onclick="location.href='collections.html'">Collections</button>
+        </nav>
 
-            <button>Archeology</button>
-            <button>Anthropology</button>
-            <button>History</button>
+        <nav>
+            <button onclick="showSection('archeology')">Archeology</button>
+            <button onclick="showSection('anthropology')">Anthropology</button>
         </nav>
     </header>
 
     <main>
-        <p>Collection Galleries</p>
+        <section id="archeology" class="collection-section">
+            <h1>Archeology</h1>
+
+            <section class="collection-item">
+                <img src="../images/collections/artifact1.jpg" alt="Obsidian spearhead found in the dirt">
+                <div class="collection-text">
+                    <h2>Obsidian Spearhead</h2>
+
+                    <p><strong>Material:</strong> Volcanic glass (obsidian), predominantly black with subtle gray translucence along thinner edges.</p>
+
+                    <p><strong>Size/Weight/Shape:</strong> 
+                    <ul>
+                        <li>Length: Approximately 14.2 cm</li>
+                        <li>Maximum width: Approximately 4.1 cm</li>
+                        <li>Thickness: Ranges from 0.4-0.9 cm</li>
+                        <li>Weight: Approximately 62 g</li>
+                        <li>Shape: Leaf-shaped, tapering to a pointed distal end with a slightly concave base suitable for hafting.</li>
+                    </ul>
+                    </p>
+
+                    <p><strong>Estimated Age:</strong> Based on associated stratigraphy and typological comparison, likely produced several thousand years ago; precise dating pending contextual analysis.</p>
+
+                    <p><strong>Preservation State:</strong> Overall well-preserved. Edges remain sharp with minimal modern chipping. Surface shows slight patination consistent with long-term burial. No significant fractures or thermal alterations observed.</p>
+
+                    <p><strong>Location Found:</strong> Recovered from a controlled excavation at a dry upland terrace site; exact coordinates recorded in field notes.</p>
+
+                    <p><strong>Likely Purpose:</strong> Designed as a projectile or thrusting weapon component, intended for hafting onto a wooden shaft.</p>
+
+                    <p><strong>Evidence of Use:</strong> Microscopic edge wear visible along both lateral cutting edges. Minor step fractures near the tip suggest contact with hard material. No residues noted during initial visual inspection.</p>
+
+                    <p><strong>Manufacture Clues:</strong> Fine, parallel pressure-flaking scars present along both margins. Larger percussion flake removals visible near the base, indicating initial shaping by hard-hammer or soft-hammer percussion followed by detailed retouch.</p>
+
+                    <p><strong>Found With:</strong> Recovered in proximity to small lithic debitage, a fragmentary bone tool, and several unmodified stones. No associated ceramics or metal objects noted in the immediate context.</p>
+
+                    <p><strong>Burial or Habitat Context:</strong> Located within a compact, silty sediment layer approximately 40 cm below surface. The layer contained scattered faunal remains and lithic materials, with no evidence of structural features.</p>
+
+                    <p><strong>Symbolism:</strong> No engravings, pigments, or decorative modifications observed. Form and finish appear strictly functional.</p>
+
+                    <p><strong>Comparison:</strong> Comparable in size and workmanship to other obsidian projectile points from regional upland sites. Exhibits typical pressure-flaked margins and basal concavity consistent with known spearhead forms.</p>
+
+                    <p><strong>Additional Observations:</strong> The obsidian displays a uniform glassy luster with slight iridescence under angled light. The basal concavity shows minor smoothing, possibly from hafting contact. Overall morphology is symmetrical, with only slight deviation along one edge due to ancient flake removal.</p>
+                </div>
+            </section>
+
+            <section class="collection-item">
+                <img src="../images/collections/artifact2.jpg" alt="Ancient pottery vessel with decorative carvings">
+                <div class="collection-text">
+                    <h2>Ceramic Storage Vessel</h2>
+                    <p><strong>Material:</strong> Coarse earthenware clay with visible mineral inclusions; surface coated with a thin slip exhibiting a matte finish.</p>
+
+                    <p><strong>Size/Weight/Shape:</strong>
+                    <ul>
+                        <li>Height: 38.6 cm</li>
+                        <li>Maximum diameter: 27.4 cm</li>
+                        <li>Rim diameter: 18.1 cm</li>
+                        <li>Base diameter: 11.3 cm</li>
+                        <li>Weight: Approximately 4.2 kg</li>
+                        <li>Shape: Globe body with a slightly constructed neck, flaring rim, and rounded base.</li>
+                    </ul>
+                    </p>
+
+                    <p><strong>Estimated Age:</strong> Based on stratigraphic position and associated materials, likely produced several centuries ago; precise dating pending laboratory analysis.</p>
+
+                    <p><strong>Preservation State:</strong> Structurally intact with no major fractures. Minor surface abrasions and small chips along the rim. Slip layer partially worn, especially on the vessel's upper half. No evidence of restoration.</p>
+
+                    <p><strong>Location Found:</strong> Recovered from an excavation trench within the central habitation zone of the site; exact grid coordinates recorded in field documentation.</p>
+
+                    <p><strong>Likely Purpose:</strong> Designed for storage of dry goods or liquids, indicated by its capacity and enclosed form.</p>
+
+                    <p><strong>Evidence of Use:</strong> Interior surface shows faint horizontal striations and slight darkening near the base. No visible residues or encrustations noted during initial inspection.</p>
+
+                    <p><strong>Manufacture Clues:</strong> Hand-built using coil construction, evidenced by subtle internal coil lines. Exterior smoothed with a tool or hand, leaving faint parallel marks. Firing appears to have been conducted in an oxidizing environment, suggested by the uniform reddish-brown coloration.</p>
+
+                    <p><strong>Found With:</strong> Recovered in association with small ceramic sherds, a groundstone fragment, and scattered faunal remains. No metal artifacts or decorative items found in direct proximity.</p>
+
+                    <p><strong>Burial or Habitat Context:</strong> Located within a compact, silty soil layer approximately 55 cm below surface. The layer contained domestic refuse, including bone fragments and charcoal flecks, with no architectural features present.</p>
+
+                    <p><strong>Symbolism:</strong> No decorative motifs, incisions, or painted elements observed. Vessel exhibits a purely utilitarian form.</p>
+
+                    <p><strong>Comparison:</strong> Comparable in size and construction to other storage vessels from the same excavation area. Shares common traits such as coil-built walls, flaring rim, and coarse inclusions typical of local ceramic production.</p>
+
+                    <p><strong>Additional Observations:</strong> The vessel's surface shows slight unevenness consistent with hand-forming. The base is rounded but stable when placed on a flat surface. The interior slip is thinner than the exterior, allowing inclusions to be more visible inside the vessel.</p>
+                </div>
+            </section>
+
+            <section class="collection-item">
+                <img src="../images/collections/artifact3.jpg" alt="Bronze dagger with ornate handle">
+                <div class="collection-text">
+                    <h2>Bone Needle</h2>
+                    <p><strong>Material:</strong> Dense mammalian long-bone fragment, creamy white to light tan in coloration, with fine longitudinal grain typical of compact bone.</p>
+
+                    <p><strong>Size/Weight/Shape:</strong>
+                    <ul>
+                        <li>Length: 9.7 cm</li>
+                        <li>Maximum width: 0.6 cm</li>
+                        <li>Thickness: 0.4 cm</li>
+                        <li>Weight: Approximately 6 g</li>
+                        <li>Shape: Elongated, tapering tool with a pointed distal end and a slightly flattened proximal end; cross-section oval to sub-rectangular.</li>
+                    </ul>
+                    </p>
+
+                    <p><strong>Estimated Age:</strong> Based on stratigraphic association, likely produced several hundred to several thousand years ago; precise dating pending contextual analysis.</p>
+
+                    <p><strong>Preservation State:</strong> Well-preserved with minimal surface erosion. Point remains sharp with only slight rounding. Minor surface cracking present along the mid-section. No modern breaks observed.</p>
+
+                    <p><strong>Location Found:</strong> Recovered from a controlled excavation unit within the site's midden area; exact grid coordinates documented in field records.</p>
+
+                    <p><strong>Likely Purpose:</strong> Form and dimensions consistent with piercing or perforating tasks, suitable for use as a needle or awl.</p>
+
+                    <p><strong>Evidence of Use:</strong> Tip exhibits fine polish and slight compression consistent with repeated contact against resistant material. Lateral surfaces near the distal end show localized smoothing. No visible residues detected during initial inspection.</p>
+
+                    <p><strong>Manufacture Clues:</strong> Tool shaped from a long-bone splinter. Evidence of scraping along the shaft, visible as parallel linear striations. Distal point formed by careful abrasion and thinning. Proximal end shows slight beveling, likely from shaping or handling.</p>
+
+                    <p><strong>Found With:</strong> Recovered alongside small faunal fragments, a cluster of lithic flakes, and several unmodified stones. No associated ceramics or metal objects in immediate proximity.</p>
+
+                    <p><strong>Burial or Habitat Context:</strong> Located within a compact, dark organic soil layer approximately 32 cm below surface. Context contained mixed domestic refuse including bone, charcoal, and shell fragments.</p>
+
+                    <p><strong>Symbolism:</strong> No engravings, decorative modifications, or pigment traces observed. Tool exhibits strictly functional shaping.</p>
+
+                    <p><strong>Comparison:</strong> Comparable in size and workmanship to other bone awls and needles from the same excavation area. Shares common traits such as elongated form, scraped surfaces, and finely shaped point.</p>
+
+                    <p><strong>Additional Observations:</strong> Surface retains slight sheen in areas of repeated handling or use. Bone grain remains visible along the shaft. Tool is straight with only minor curvature near the proximal end, likely inherent to the original bone fragment.</p>
+                </div>
+            </section>
+
+        </section>
+
+        <section id="anthropology" class="collection-section" style="display:none;">
+            <h1>Anthropology</h1>
+
+            <section class="collection-item">
+                <img src="../images/collections/artifact4.jpg" alt="Fossilized remains of prehistoric mammal">
+                <div class="collection-text">
+                    <h2>Mammoth Tooth Fragment</h2>
+                    <p><strong>Material:</strong> Fossilized dentin and enamel; coloration ranges from light brown to dark gray with mineral infill visible in fissures.</p>
+
+                    <p><strong>Size/Weight/Shape:</strong>
+                    <ul>
+                        <li>Length: 7.8 cm</li>
+                        <li>Width: 5.2 cm</li>
+                        <li>Thickness: 3.4 cm</li>
+                        <li>Weight: Approximately 310 g</li>
+                        <li>Shape: Irregular fragment preserving a portion of one enamel plate and adjacent dentin, with broken margins on all sides.</li>
+                    </ul>
+                    </p>
+                    <p><strong>Estimated Age:</strong> Derived from Pleistocene deposits; exact age pending radiometric or stratigraphic confirmation.</p>
+
+                    <p><strong>Preservation State:</strong> Moderately well-preserved. Enamel ridges remain distinct though partially worn. Dentin shows minor cracking and surface exfoliation. No recent breakage observed. Mineralization consistent with long-term fossilization.</p>
+
+                    <p><strong>Location Found:</strong> Recovered from a controlled excavation unit within a lowland alluvial terrace; precise grid coordinates recorded in field documentation.</p>
+
+                    <p><strong>Likely Purpose:</strong> Biological tooth fragment; no evidence of modification for tool use.</p>
+
+                    <p><strong>Evidence of Use:</strong> Natural wear facets present on enamel surfaces, consistent with mastication. No anthropogenic marks or alterations observed.</p>
+
+                    <p><strong>Manufacture Clues:</strong> Not applicable; fragment exhibits natural anatomical structure with no signs of human shaping or modification.</p>
+
+                    <p><strong>Found With:</strong> Recovered in association with additional faunal remains including fragmented long bones and rib sections. Sparse lithic debitage present in the broader context but not directly adjacent.</p>
+
+                    <p><strong>Burial or Habitat Context:</strong> Located within a compact silty-sand layer approximately 1.2 m below surface. Sediment contained mixed Pleistocene faunal material and small gravel inclusions, with no cultural features identified.</p>
+
+                    <p><strong>Symbolism:</strong> No engravings, pigment traces, or intentional markings present.</p>
+
+                    <p><strong>Comparison:</strong> Morphology and enamel plate structure consistent with known Mammuthus molar fragments from regional Pleistocene deposits. Plate thickness and curvature align with typical mammoth grinding teeth.</p>
+
+                    <p><strong>Additional Observations: </strong> Enamel displays alternating light and dark mineral bands. Dentin surface shows slight polish likely from sediment abrasion. Fragment edges are rounded, suggesting prolonged post-depositional movement within sediment.</p>
+                </div>
+            </section>
+
+            <section class="collection-item">
+                <img src="../images/collections/artifact5.jpg" alt="Partial human skull found at excavation site">
+                <div class="collection-text">
+                    <h2>Partial Human Burial Skull</h2>
+                    <p><strong>Material:</strong> Human bone (fossilizing cortical and trabecular tissue), light brown to tan in coloration with localized darker mineral staining.</p>
+
+                    <p><strong>Size/Weight/Shape:</strong>
+                    <ul>
+                        <li>Maximum preserved length: 12.4 cm</li>
+                        <li>Maximum preserved width: 10.1 cm</li>
+                        <li>Thickness of cranial vault: 0.5-0.8 cm</li>
+                        <li>Weight: Approximately 215 g</li>
+                        <li>Shape: Irregular cranial fragment including portions of the frontal and parietal regions, with broken margins on all sides.</li>
+                    </ul>
+                    </p>
+                    <p><strong>Estimated Age:</strong> Recovered from a stratified burial layer; chronological age pending radiocarbon or contextual dating.</p>
+
+                    <p><strong>Preservation State:</strong> Moderately well-preserved. Outer cortical surface intact with minor exfoliation. Several small fissures present along the vault. No recent breaks identified. Mineral accretions present in recessed areas.</p>
+
+                    <p><strong>Location Found:</strong> Excavated from a designated burial feature within the site's eastern sector; precise grid coordinates recorded in field documentation.</p>
+
+                    <p><strong>Likely Purpose:</strong> Biological skeletal element; no evidence of modification for non-anatomical use.</p>
+
+                    <p><strong>Evidence of Use:</strong> Not applicable; no cut marks, tool impressions, or anthropogenic alterations observed on the preserved surfaces.</p>
+
+                    <p><strong>Manufacture Clues:</strong> Not applicable; specimen reflects natural human cranial anatomy with no signs of shaping or artificial modification.</p>
+
+                    <p><strong>Found With:</strong> Recovered in association with additional human skeletal elements including rib fragments and vertebral pieces. Small quantities of sediment-embedded charcoal and unmodified stones present within the burial fill.</p>
+
+                    <p><strong>Burial or Habitat Context:</strong> Located within a defined burial pit filled with compact silty soil. Sediment contained minor organic inclusions and small rootlets. No structural features or grave goods identified.</p>
+
+                    <p><strong>Symbolism:</strong> No engravings, pigment traces, or intentional markings present.</p>
+
+                    <p><strong>Comparison:</strong> Morphology and vault thickness consistent with adult human cranial fragments recovered from comparable burial contexts at the site. Breakage patterns similar to other remains subjected to long-term soil pressure.</p>
+
+                    <p><strong>Additional Observations: </strong> Cortical surface exhibits slight smoothing likely due to sediment abrasion. Inner cranial surface retains visible impressions of vascular grooves. Fragment curvature suggests origin from the upper cranial vault.</p>
+                </div>
+            </section>
+
+            <section class="collection-item">
+                <img src="../images/collections/artifact6.jpg" alt="Collection of bones for study">
+                <div class="collection-text">
+                    <h2>Ancient Footprint Cast</h2>
+                    <p><strong>Material:</strong> Plaster cast created from an original sediment impression; surface exhibits fine-grained texture replicating the source substrate.</p>
+
+                    <p><strong>Size/Weight/Shape:</strong>
+                    <ul>
+                        <li>Length of footprint impression: 24.3 cm</li>
+                        <li>Maximum width: 10.6 cm</li>
+                        <li>Depth of impression: up to 1.8 cm</li>
+                        <li>Weight of cast: Approximately 1.9 kg</li>
+                        <li>Shape: Elongated footprint with defined heel, arch, and forefoot regions; individual toe impressions preserved with varying clarity.</li>
+                    </ul>
+                    </p>
+                    <p><strong>Estimated Age:</strong> Represents an impression originally formed in ancient sedimentary deposits; chronological age pending geological and contextual dating of the source layer.</p>
+
+                    <p><strong>Preservation State:</strong> Cast is intact with no structural cracks. Minor surface abrasions present along the edges. Fine details of the original impression—including toe ridges and heel contour—are well preserved. No modern repairs observed.</p>
+
+                    <p><strong>Location Found:</strong> Excavated from a designated burial feature within the site's eastern sector; precise grid coordinates recorded in field documentation.</p>
+
+                    <p><strong>Likely Purpose:</strong> Biological trace impression representing locomotion; cast produced for documentation and preservation.</p>
+
+                    <p><strong>Evidence of Use:</strong> Not applicable to the cast itself. The footprint impression shows natural pressure distribution patterns consistent with weight-bearing movement.</p>
+
+                    <p><strong>Manufacture Clues:</strong> Not applicable to the cast itself. The footprint impression shows natural pressure distribution patterns consistent with weight-bearing movement.</p>
+
+                    <p><strong>Found With:</strong> Original footprint located within a cluster of similar impressions. Cast stored with associated field documentation and sediment samples.</p>
+
+                    <p><strong>Burial or Habitat Context:</strong> Original impression formed in compacted fine-grained sediment, likely moist at the time of formation. Surrounding layer contained additional trace impressions and small lithic fragments.</p>
+
+                    <p><strong>Symbolism:</strong> No symbolic markings or intentional modifications present.</p>
+
+                    <p><strong>Comparison:</strong> Morphology and proportions consistent with other hominin footprint casts from the same locality. Toe spacing, arch contour, and heel depth comparable to previously documented specimens.</p>
+
+                    <p><strong>Additional Observations: </strong> Surface of the cast retains subtle textural variations reflecting the original sediment. Toe impressions vary in depth, with the hallux most clearly defined. Heel region shows a smooth, rounded depression with slight lateral asymmetry.</p>
+                </div>
+            </section>
+
+        </section>
+
     </main>
 
+    
     <footer>
         <p>This is a ficticious website created purely for academic purposes.</p>
         <p>The content on this site was conceived by a human and created by AI. The images were created by AI and curated, edited, reviewed, verified, validated and augmented by a human.</p>
     </footer>
+
+    <script>
+        function showSection(section) {
+            const sections = document.querySelectorAll('.collection-section');
+            sections.forEach(s => s.style.display = 'none');
+            document.getElementById(section).style.display = 'block';
+        }
+    </script>
+
 </body>
 </html>
