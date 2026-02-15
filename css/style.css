@@ -125,3 +125,74 @@ footer {
     margin: 6px 0 12px 20px;
     color: #000000;
 }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: none;
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  margin: 5% auto;
+  padding: 24px;
+  width: 70%;
+  max-width: 800px;
+  border-radius: 8px;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.close-modal {
+  float: right;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-item {
+  display: none;
+}
+
+#histories {
+    color: white;
+}
+
+#histories h2 {
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+#histories .history-item {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+#histories .history-item img {
+    width: 300px;
+    height: auto;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+#histories .history-item .interpretation {
+    flex: 1;
+    color: white;
+}
+
+#histories .history-item .other-content {
+    width: 100%;
+    margin-top: 10px;
+    color: white;
+}
+
+
