@@ -90,50 +90,83 @@
 <body>
   <header>
     <h1>Souvenir Shop</h1>
+    <button onclick="location.href='cart.html'">View Cart</button>
   </header>
 
-<div class="shop-container">
+  <div class="shop-container">
 
   <!-- BEGIN ITEM 1 -->
   <div class="souvenir-item" data-id="item001">
-    <img src="../images/collections/shopitem1.jpg" alt="Starbone Totem Replica" onclick="openModal(this)" />
+    <img src="../images/collections/shopitem1.jpg" alt="Starbone Totem Replica" onclick="openModal(this)">
     <h3>Starbone Totem Replica</h3>
     <p>The Starbone Totem is carved from shimmering fossilized bone and stardust-rich stone, crafted by artisans of the Northern Steppe. This mystical piece was traditionally used as a guide for travelers seeking wisdom and safe passage under the night sky. It's a pocket-sized slice of legend, ready to spark curiosity on any shelf.</p>
     <p><strong>Price:</strong> $24.99</p>
-    <button onclick="addToCart('item001')">Add Starbone Totem Replica to Cart</button>
+    <button
+      onclick="addToCart(this)"
+      data-id="item001"
+      data-name="Starbone Totem Replica"
+      data-price="24.99"
+      data-image="../images/collections/shopitem1.jpg">
+      Add Starbone Totem Replica to Cart
+    </button>
+    <span class="qty-badge" aria-live="polite"></span>
     <span title="Replica of the Starbone Fossil"></span>
   </div>
   <!-- END ITEM 1 -->
 
   <!-- BEGIN ITEM 2 -->
   <div class="souvenir-item" data-id="item002">
-    <img src="../images/collections/shopitem2.jpg" alt="Trilobite Fossil Cast" onclick="openModal(this)" />
+    <img src="../images/collections/shopitem2.jpg" alt="Trilobite Fossil Cast" onclick="openModal(this)">
     <h3>Trilobite Fossil Cast</h3>
     <p>The Trilobite Fossil cast is a detailed resin replica of one of Earth's earliest ocean explorers, preserved from the prehistoric world. It captures the iconic ridged shape of these ancient arthropods, offering a hands-on glimpse into life hundreds of millions of years ago. A perfect pocket-sized time machine for any curious collector.</p>
     <p><strong>Price:</strong> $19.99</p>
-    <button onclick="addToCart('item002')">Add Trilobite Fossil Cast to Cart</button>
+    <button
+      onclick="addToCart(this)"
+      data-id="item002"
+      data-name="Trilobite Fossil Cast"
+      data-price="19.99"
+      data-image="../images/collections/shopitem2.jpg">
+      Add Trilobite Fossil Cast to Cart
+    </button>
+    <span class="qty-badge" aria-live="polite"></span>
     <span title="Replica of a trilobite fossil, hand cast in resin"></span>
   </div>
   <!-- END ITEM 2 -->
 
   <!-- BEGIN ITEM 3 -->
   <div class="souvenir-item" data-id="item003">
-    <img src="../images/collections/shopitem3.jpg" alt="Deep Ur Incense Set" onclick="openModal(this)" />
+    <img src="../images/collections/shopitem3.jpg" alt="Deep Ur Incense Set" onclick="openModal(this)">
     <h3>Deep Ur Incense Set</h3>
     <p>The Deep Ur incense set is inspired by ancient ritual traditions, blending aromatic resins and natural botanicals to echo the scents of early ceremonial life. Each stick is crafted from fine plant-based materials, offering a modern way to connect with the cultural spirit of long-ago civilizations. It's a little whiff of history, ready to bring timeless atmosphere to any home.</p>
     <p><strong>Price:</strong> $14.99</p>
-    <button onclick="addToCart('item003')">Add Deep Ur Incense Set to Cart</button>
+    <button
+      onclick="addToCart(this)"
+      data-id="item003"
+      data-name="Deep Ur Incense Set"
+      data-price="14.99"
+      data-image="../images/collections/shopitem3.jpg">
+      Add Deep Ur Incense Set to Cart
+    </button>
+    <span class="qty-badge" aria-live="polite"></span>
     <span title="Scent of the Coral Queen incense, crafted in the style of Deep Ur priests."></span>
   </div>
   <!-- END ITEM 3 -->
 
   <!-- BEGIN ITEM 4 -->
   <div class="souvenir-item" data-id="item004">
-    <img src="../images/collections/shopitem4.jpg" alt="Coral Queen Amulet" onclick="openModal(this)" />
+    <img src="../images/collections/shopitem4.jpg" alt="Coral Queen Amulet" onclick="openModal(this)">
     <h3>Coral Queen Amulet</h3>
     <p>"A small jewelry amulet called the Coral Queen Amulet, made of coral and gold, with intricate carvings of a queen figure, placed on a black velvet display, realistic lighting, high-resolution"</p>
     <p><strong>Price:</strong> $29.99</p>
-    <button onclick="addToCart('item004')">Add Coral Queen Amulet to Cart</button>
+    <button
+      onclick="addToCart(this)"
+      data-id="item004"
+      data-name="Coral Queen Amulet"
+      data-price="29.99"
+      data-image="../images/collections/shopitem4.jpg">
+      Add Coral Queen Amulet to Cart
+    </button>
+    <span class="qty-badge" aria-live="polite"></span>
     <span title="Inspired by the artifacts of the Coral Queen"></span>
   </div>
   <!-- END ITEM 4 -->
@@ -150,10 +183,44 @@
   </div>
 
   <script>
-    function addToCart(itemId) {
-      alert("Added " + itemId + " to cart (functionality to come)");
-      // Future: Push to cart array
+    const CART_KEY = 'museumCartV1';
+
+    function readCart() {
+      try { return JSON.parse(localStorage.getItem(CART_KEY)) || []; }
+      catch { return []; }
     }
+
+    function writeCart(cart) {
+      localStorage.setItem(CART_KEY, JSON.stringify(cart));
+    }
+
+    function addToCart(btn) {
+      const id = btn.dataset.id;
+      const name = btn.dataset.name;
+      const unitPrice = Number(btn.dataset.price);
+      const image = btn.dataset.image;
+
+      let cart = readCart();
+      const idx = cart.findIndex(it => it.id === id);
+
+      if (idx >= 0) {
+        cart[idx].qty += 1;
+      } else {
+        cart.push({ id, name, unitPrice, qty: 1, image });
+      }
+
+      writeCart(cart);
+
+      const card = btn.closest('.souvenir-item');
+      if (card) {
+        const badge = card.querySelector('.qty-badge');
+        if (badge) {
+          const item = cart.find(it => it.id === id);
+          badge.textContent = item ? `Qty: ${item.qty}` : '';
+        }
+      }
+    }
+
 
     function openModal(imgElement) {
       const modal = document.getElementById("modal");
